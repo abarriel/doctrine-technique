@@ -25,6 +25,9 @@
       "react/no-typos": [0],
       "react/require-default-props": [0],
       "no-shadow": [0],
+      "curly": [0],
+      "react/no-did-mount-set-state": [0],
+      "no-throw-literal": [0],
       "react/forbid-prop-types": [0, { "forbid": [ "array", "object"] }]
     }
 }  
