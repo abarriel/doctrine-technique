@@ -4,8 +4,6 @@ import bodyParser from 'body-parser';
 import logger from 'morgan';
 import cors from 'cors';
 import colors from 'colors/safe';
-// import swaggerUi from 'swagger-ui-express';
-// import swaggerDocument from './swagger.json';
 
 import { getRessources, mixIngredients } from './service/ressources';
 
@@ -20,13 +18,6 @@ const errorHandler = (err, req, res, next) => {
   console.log(colors.red('[ERROR]'), details);
   next();
 };
-
-// const swaggerOptions = {
-//   explorer: true,
-//   swaggerOptions: {
-//     validatorUrl: null,
-//   },
-// };
 
 /**
  *  The Server is actually working and functional once the callback of app.listen is called.
@@ -44,7 +35,6 @@ const initServer = (async () => {
     .use(bodyParser.urlencoded({ extended: true }));
 
   await app
-  // .use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOptions))
     .get('/ressources', getRessources)
     .post('/ressources', mixIngredients);
 
