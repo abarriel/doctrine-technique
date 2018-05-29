@@ -1,0 +1,14 @@
+{
+    "presets": [
+      ["@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+      }], "@babel/preset-react"],
+    "plugins": [
+      "transform-promise-to-bluebird",
+      "lodash",
+      "transform-class-properties",
+      "@babel/proposal-object-rest-spread"
+    ]
+  }
